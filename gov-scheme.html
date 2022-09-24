@@ -26,11 +26,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
         </script>
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 </head>
 
 <body>
     <nav id="go-to-top" class="navbar navbar-expand-lg selectDisable">
-        <a class="navbar-brand" href="index.html"> TECHIFY </a>
+        <a class="navbar-brand" href="index.html">
+            Queens Site
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -38,20 +42,36 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item navlink-border">
-                    <a class="nav-link px-4" href="resources.html">Resources</a>
+                    <div class="dropdown show">
+                        <a class="nav-link px-4 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-landmark-flag"></i> Financial Help
+                        </a>
+                        
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="/scholarship.html">Scholarships</a>
+                            <a class="dropdown-item" href="#">Government Schemes</a>
+                            <a class="dropdown-item" href="#">Loan Facilities</a>
+                            <a class="dropdown-item" href="/loan-calculator.html">Loan Calculator</a>
+                        </div>
+                    </div>
+                    
                 </li>
                 <li class="nav-item navlink-border">
-                    <a class="nav-link px-4" href="#">Products</a>
+                    <a class="nav-link px-4" href=""><i class="fa-solid fa-graduation-cap"></i> Learn Skill</a>
                 </li>
                 <li class="nav-item navlink-border">
-                    <a class="nav-link px-4" href="#">Ideas</a>
+                    <a class="nav-link px-4" href="/jobs.html"><i class="fa-sharp fa-solid fa-user-doctor"></i> Find Jobs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-4" href="login.html"><button class="btn login-btn">Login</button></a>
+                    <a class="nav-link px-4" href="/login.html"><button class="btn login-btn">Login</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="/helpline.html"><button class="btn login-btn"><i class="fa-solid fa-phone"></i> Helpline</button></a>
                 </li>
             </ul>
         </div>
     </nav>
+
 
     <section id="resources">
         <div class="container-fluid-hero">
