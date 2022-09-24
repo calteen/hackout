@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHIFY</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- aos css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font awesome -->
+   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/9b54928ef1.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style-loan.css">
+</head>
+
+<body>
+    <nav id="go-to-top" class="navbar navbar-expand-lg selectDisable">
+        <a class="navbar-brand" href="index.html">
+            Queens Site
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item navlink-border">
+                    <a class="nav-link px-4" href=""><i class="fa-solid fa-graduation-cap"></i> Learn Skill</a>
+                </li>
+                <li class="nav-item navlink-border">
+                    <div class="dropdown show">
+                        <a class="nav-link px-4 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-landmark-flag"></i> Financial Help
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="/scholarship.html">Scholarships</a>
+                          <a class="dropdown-item" href="#">Government Schemes</a>
+                          <a class="dropdown-item" href="#">Loan Facilities</a>
+                        </div>
+                      </div>
+
+                </li>
+                <li class="nav-item navlink-border">
+                    <a class="nav-link px-4" href="/jobs.html"><i class="fa-sharp fa-solid fa-user-doctor"></i> Find Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="login.html"><button class="btn login-btn">Login</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="login.html"><button class="btn login-btn"><i class="fa-solid fa-phone"></i> Helpline</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="loan_calc">
+        <div class="container">
+            <div class="container my-5">
+                <div id="app">
+                  <div class="row mb-5">
+                    <h5 class="col-12 mb-4">How much capital are you looking for?</h5>
+                    <div class="col-12">
+                      <div class="row align-items-center mb-4">
+                        <div class="col-12 col-sm-4">
+                          <div class="fg">
+                            <select name="currency" id="currency" onchange="calculator.setCurrency(event)">
+                                <option value="CHF">INR</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                            <div id="amount">
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-8">
+                          <div class="length range__slider">
+                            <input 
+                                   class="slider" 
+                                   name="amount"
+                                   type="range" 
+                                   min="20000" 
+                                   max="1000000" 
+                                   step="20000" 
+                                   value="20000"
+                                   oninput="calculator.setAmount(event)" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <h5 class="col-12">Over what payback period?</h5>
+                  </div>
+                  
+                  <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="length range__slider">
+                            <input 
+                                   class="slider" 
+                                   name="period"
+                                   type="range" 
+                                   min="12" 
+                                   max="60" 
+                                   step="6"
+                                   value="12"
+                                   oninput="calculator.setPeriod(event)" />
+                          
+                          </div>
+                        <div id="period" class="text-center color-accent">
+                          
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row mb-4">
+                    <h5 class="col-12">
+                      Assumed risk rating?
+                    </h5>
+                  </div>
+                  
+                   <div id="levels" class="row mb-4">
+                    </div>
+                  
+                  <div class="row risk-info mb-5">
+                    <div class="col-2 text-center">LOW</div>
+                    <div class="col-8">
+                      <div class="arrow-line mt-2">
+                        <div class="arrow-top"></div>
+                      </div>
+                    </div>
+                    <div class="col-2 text-center">HIGH</div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-12 col-md-7 text-center">
+                      <div class="report">
+                        <h5>
+                          Indicative monthly cost
+                        </h5>
+                        <h2 id="total" class="color-accent strong"></h2>
+                        <div class="row info">
+                          <div id="nominal" class="col-12 text-center">
+                           
+                          </div>
+              
+                        </div>
+                      </div>
+                    </div>
+                
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+        
+    
+    </section>
+
+
+    <section id="build-flex">
+        <div class="container-fluid">
+            <h1>Built during <a href="https://hack2skill.com/hack/hackout22">#HackOut 2022</a> <span>under 72
+                    hours.</span></h1>
+        </div>
+    </section>
+
+    
+</body>
+<script src="loan.js"></script>
+</html>

@@ -82,6 +82,14 @@ nav {
     padding-right: 2%;
 }
 
+.navbar {
+    position: static;
+  }
+  .navbar .nav > li {
+    z-index: 1001;
+  }
+  
+
 .navbar-brand {
     font-size: 2rem;
     font-weight: bolder;
@@ -128,6 +136,10 @@ a.nav-link.px-4 {
     padding: 10px 30px;
 }
 
+/* .dropdown-menu {
+    z-index: 3;
+} */
+
 
 /* hero section */
 
@@ -140,7 +152,7 @@ a.nav-link.px-4 {
 
 .hero-intro {
     position: relative;
-    z-index: 5;
+    z-index: 2;
 }
 
 #hero-section h1 {

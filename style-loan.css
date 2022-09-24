@@ -1,0 +1,263 @@
+:root {
+    --color-brand: #eb672e;
+    --color-bg: #f5f5f5;
+    --color-accent: #3aabb9;
+    --color-border: #707070;
+    --color-neutral: #cbcbcb;
+    --field-color: rgba(255, 255, 255, 0.08);
+    --field-height: 65px;
+    --field-border-radius: 8px;
+    --range-handle-color: rgb(255, 255, 255);
+    --range-handle-color-hover: rgb(212, 212, 212);
+    --range-handle-size: 20px;
+    --range-track-color: rgba(255, 255, 255, 0.314);
+    --range-track-height: 4px;
+    --range-label-width: 60px;
+  }
+  
+  html {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    font-size: 1rem;
+    color: var(--color-border);
+    background-color: var(--color-bg);
+  }
+  
+  h5 {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  select,
+  #amount {
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+    background: transparent;
+    border: 3px solid var(--color-border);
+  }
+  
+  select {
+    color: var(--color-border);
+    padding: 9px 25px 9px 10px;
+    border-radius: 10px 0 0 10px;
+    background-image: url("data:image/svg+xml;utf8,<svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: 0.3s all ease-in;
+  }
+  select:hover {
+    cursor: pointer;
+    box-shadow: inset 0 50px 0 0 var(--color-neutral);
+  }
+  select:focus {
+    color: black;
+    box-shadow: inset 0 50px 0 0 var(--color-accent);
+    outline: none;
+  }
+  
+  #amount {
+    width: 100%;
+    font-size: 1.4rem;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    padding: 5px 20px;
+    color: var(--color-accent);
+    transition: 0.3s all ease-in;
+  }
+  #amount:hover {
+    color: white;
+    box-shadow: inset 300px 0 0 0 var(--color-accent);
+  }
+  
+  .fg {
+    display: flex;
+  }
+  
+  .range__slider {
+    position: relative;
+    width: 100%;
+    height: calc(var(--field-height) - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--field-color);
+    border-radius: var(--field-border-radius);
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: var(--range-track-height);
+    box-shadow: 1px 2px 0 0 rgba(255, 255, 255, 0.5);
+    border: 0;
+    border-radius: 5px;
+    background: var(--color-neutral);
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: var(--range-handle-size);
+    height: var(--range-handle-size);
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.15s ease-in-out;
+  }
+  .slider::-webkit-slider-thumb:hover {
+    background: var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    transform: scale(1.2);
+  }
+  .slider::-moz-range-thumb {
+    width: var(--range-handle-size);
+    height: var(--range-handle-size);
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+  }
+  .slider::-moz-range-thumb:hover {
+    background: var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    transform: scale(1.2);
+  }
+  
+  .color-accent {
+    color: var(--color-accent);
+  }
+  
+  .strong {
+    font-weight: 800;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 2rem 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
+  }
+  .rating:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--color-brand);
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .rating.selected {
+    color: white;
+    background-color: var(--color-border);
+  }
+  
+  .arrow-line {
+    position: relative;
+    height: 1px;
+    background-color: var(--color-neutral);
+  }
+  .arrow-line .arrow-top {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-top: 1px solid var(--color-neutral);
+    border-right: 1px solid var(--color-neutral);
+    transform: rotate(45deg);
+  }
+  
+  .risk-info {
+    color: var(--color-neutral);
+    font-size: 0.8rem;
+  }
+  
+  .report {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+  }
+  .report .info {
+    font-size: 0.8rem;
+    color: #b7b7b7;
+  }
+  
+  .apply {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem;
+    background: transparent;
+    border: 10px solid white;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 800;
+  }
+  .apply .info {
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    z-index: 2;
+  }
+  .apply .wave {
+    width: 600px;
+    height: 400px;
+    opacity: 0.6;
+    background-color: var(--color-accent);
+    border-radius: 40%;
+    position: absolute;
+    top: -270px;
+    left: -150px;
+    z-index: -1;
+    animation: spin 16s linear infinite;
+  }
+  .apply .wave:nth-child(2) {
+    top: -265px;
+    animation-duration: 20s;
+  }
+  .apply .wave:nth-child(3) {
+    top: -260px;
+    animation-duration: 24s;
+  }
+  .apply:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .apply:hover .wave {
+    animation-duration: 4s;
+  }
+  .apply:hover .wave:nth-child(2) {
+    animation-duration: 6s;
+  }
+  .apply:hover .wave:nth-child(3) {
+    animation-duration: 5s;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
