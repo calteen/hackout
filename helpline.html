@@ -79,14 +79,14 @@
         </div>
     </nav>
 
-
+<div class="main_body" style="display:flex">
     <nav class="sidebar card py-2 mb-4">
         <ul class="nav flex-column" id="nav_accordion">
             <li class="nav-item">
                 <a class="nav-link" href="#"> Link name <i class="fa-solid fa-caret-down"></i></a>
             </li>
             <li class="nav-item has-submenu">
-                <a class="nav-link" href="#"> Submenu links  <i class="fa-solid fa-caret-down"></i></a>
+                <a class="nav-link" href="#"> Complain & investigation cell <i class="fa-solid fa-caret-down"></i></a>
                 <ul class="submenu collapse">
                     <li><a class="nav-link" href="#">Submenu item 1 </a></li>
                     <li><a class="nav-link" href="#">Submenu item 2 </a></li>
@@ -109,38 +109,73 @@
                 <a class="nav-link" href="#"> Other link <i class="fa-solid fa-caret-down"></i></a>
             </li>
         </ul>
-        </nav>
+    </nav>
 
- 
-</body>
-<script>
-    document.addEventListener("DOMContentLoaded", function(){
-        document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
+    <div class="container_main">
+        <div class="container ">
+            <div class="alert alert-primary" role="alert">
+                the Government helpline support link : <a href="http://ncw.nic.in/ncw-cells/complaint-investigation-cell">http://ncw.nic.in/ncw-cells/complaint-investigation-cell</a> 
+              </div> 
+        </div>
+    <div class="container">
+        Other available NGOs
+            <div class="row">
+              <div class="col-sm">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/60ba0dd75e0b1_json_image_1622805975.webp" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Akhand Jyot Foundation</h5>
+                      <p class="card-text">Address: Fatehpura Gam, B/h. Paldi Post Office,ffice,
+                        Ahmadabad-380 007
+
+                        Service offered: Counselling support, Legal Aid
+                        
+        Contact details: 079-26643234
+        
+                        </p>
+                      <a href="#" class="btn btn-primary">Go to NGO site</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-sm">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="https://t3.ftcdn.net/jpg/04/91/36/42/360_F_491364250_VuBEanPUV46ddaXOQgZPP8xdNoKhXxGF.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">All india woman’s conference, gujarat branch</h5>
+                      <p class="card-text">Address: Dalal Apartment, Near Vikas Gruh Road,
+                        Fatehpur, Ahmadabad
+                        Service offered: Shelter Support
+        Contact details: 079-26644471
+        
+                        </p>
+                      <a href="#" class="btn btn-primary">Go to NGO site</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-sm">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="https://media.istockphoto.com/vectors/world-humanitarian-day-vector-design-with-globe-template-vector-id1164904291?k=20&m=1164904291&s=612x612&w=0&h=q21FXaI8JiQ_vRdgEJ18deZruH1rx3t3a-HKRkJS0mk=" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Awag (Ahmadabad Women’s Action Group)
+                    </h5>
+                      <p class="card-text">Address: “AWAG KUNJ”, 506, Bhudarpura, Ambawadi,
+                        Ahmadabad-380 015
+                        Service offered: Legal Aid, Counselling support,
+                        Shelter support
+                        Contact details: 079-26441214
+                        </p>
+                      <a href="#" class="btn btn-primary">Go to NGO site</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>        
           
-          element.addEventListener('click', function (e) {
-      
-            let nextEl = element.nextElementSibling;
-            let parentEl  = element.parentElement;	
-      
-              if(nextEl) {
-                  e.preventDefault();	
-                  let mycollapse = new bootstrap.Collapse(nextEl);
-                  
-                  if(nextEl.classList.contains('show')){
-                    mycollapse.hide();
-                  } else {
-                      mycollapse.show();
-                      // find other submenus with class=show
-                      var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
-                      // if it exists, then close all of them
-                      if(opened_submenu){
-                        new bootstrap.Collapse(opened_submenu);
-                      }
-                  }
-              }
-          }); // addEventListener
-        }) // forEach
-      }); 
-</script>
+          
+        
+</body>
+
 </html>
 
