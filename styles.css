@@ -79,7 +79,7 @@ nav {
 .navbar {
     /* padding: 0 0 4.5rem;  */
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 2%;
 }
 
 .navbar-brand {
@@ -116,7 +116,7 @@ a.nav-link.px-4 {
     color: var(--text-variant);
     background-image: linear-gradient(134deg, #e6198e, #e6198e, var(--primary-variant));
     border-radius: 30px;
-    padding: 10px 45px;
+    padding: 10px 30px;
     margin-top: -10px;
 }
 
@@ -125,7 +125,7 @@ a.nav-link.px-4 {
     background-image: linear-gradient(134deg, var(--primary-variant), #e6198e, #e6198e);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
-    padding: 10px 45px;
+    padding: 10px 30px;
 }
 
 
@@ -630,4 +630,19 @@ footer a:hover {
 
 #jobs {
     padding-bottom: 50px;
+}
+
+
+
+
+.gov-schemes{
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+}
+.card{
+    margin: 11px;
 }
